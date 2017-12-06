@@ -321,7 +321,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-12-04T19:25:00+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-04T19:28:03+08:00">
                 2017-12-04
               </time>
             
@@ -409,7 +409,7 @@
 ⑦实参和返回值共同构成了被调用函数的栈帕。</p>
 <h2 id="swap函数分析"><a class="markdownIt-Anchor" href="#swap函数分析"></a> swap()函数分析</h2>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> z;</div><div class="line">	z=x;</div><div class="line">	x=y;</div><div class="line">	y=z;</div><div class="line">&#125;</div><div class="line"></div><div class="line">main()</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a=<span class="number">1</span>;</div><div class="line">	<span class="keyword">int</span> b=<span class="number">2</span>;</div><div class="line">	swap(a,b);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,a,b);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>我们知道，上面的那个swap()函数是不能实现将a,b交换的功能的，当swap()函数被调用的时候，a和b的值就被复制给了实参x和y，调用栈的情况如下：</p>
+<p>我们知道，上面的那个swap()函数是不能实现将a,b交换的功能的，当swap()函数被调用的时候，a和b的值就被复制给了实参x和y，调用栈的情况如下：<br></p>
 <table>
 	<tr>
 		<td>栈帕(stack)
@@ -451,7 +451,7 @@
 	
 </table>
 <p>x的值被储存在临时变量z中，之后y的值被赋值给x，z的值赋给了y，这三步之后，在swap()函数内x和y的值确实交换了，但是在swap()中第7行代码结束之后，并在栈帕出<br>
-栈之前，栈内存是这样的：</p>
+栈之前，栈内存是这样的：<br></p>
 <table>
 	<tr>
 		<td>栈帕(stack)
@@ -492,7 +492,7 @@
 		</td></tr>
 	
 </table>
-<p>当swap()函数结束之后，顶帕出栈，栈内存就变成了：</p>
+<p>当swap()函数结束之后，顶帕出栈，栈内存就变成了：<br></p>
 <table>
 	<tr>
 		<td>栈帕(stack)
@@ -610,8 +610,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2017-10-19T13:28:52+08:00">
-                2017-10-19
+              <time title="Post modified" itemprop="dateModified" datetime="2017-12-04T22:41:57+08:00">
+                2017-12-04
               </time>
             
           </span>
@@ -660,7 +660,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  0
+                  165
                 </span>
               
 
@@ -687,7 +687,120 @@
       
         
           
-            
+            <p>最近看汇编语言，顺便整理一下学了的指令以及寄存器，后面会逐步整理整理完善</p>
+<h2 id="寄存器register"><a class="markdownIt-Anchor" href="#寄存器register"></a> 寄存器(register)</h2>
+<style>
+	table th:first-of-type{
+		width: 100px;
+		}
+</style>
+<table>
+	<thead>
+	<tr>
+		<th>寄存器</th>
+		<th>作用</th>
+	</tr>
+	</thead>
+<pre><code>&lt;tbody&gt;
+&lt;tr&gt;
+	&lt;td&gt;AX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;BX
+	&lt;td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+</code></pre>
+</table>
+
           
         
       
@@ -1484,7 +1597,7 @@ A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
@@ -1570,7 +1683,7 @@ var ap = new APlayer({
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      1.6k
+      1.8k
     </span>
   
 </div>

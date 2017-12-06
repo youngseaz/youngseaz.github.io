@@ -8,7 +8,10 @@
   <entry>
     <title><![CDATA[寄存器与指令]]></title>
     <url>%2F2017%2F10%2F19%2F%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%8E%E6%8C%87%E4%BB%A4%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[最近看汇编语言，顺便整理一下学了的指令以及寄存器，后面会逐步整理整理完善 寄存器(register) table th:first-of-type{ width: 100px; } 寄存器 作用 &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;AX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt;&lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;BX &lt;td&gt; &lt;/tr&gt; &lt;/tbody&gt;]]></content>
+      <tags>
+        <tag>assembly(汇编）</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[数电中的等式证明]]></title>
