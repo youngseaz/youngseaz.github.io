@@ -1,34 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[函数与栈]]></title>
-    <url>%2F2017%2F12%2F04%2F%E5%87%BD%E6%95%B0%E4%B8%8E%E6%A0%88%2F</url>
-    <content type="text"><![CDATA[程序使用栈内存来记住函数返回的位置，每一个c程序都由栈控制其函数执行的流程。几乎所有计算机编程语言都采用这个方案。 栈的调用规则①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。③当一个函数结束之后，程序将从储存在调用栈顶部的行编号处继续。调用栈顶部的内容就会被弹出。④如果函数有实参，那么实参是储存在返回位置之上的。⑤如果函数有局部变量，那么局部变量被储存在实参之上⑥如果一个函数返回了一个值，这个值就回被写到调用函数栈帕的一个局部变量中，这个变量的地址（叫做值地址）储存在调用栈中。⑦实参和返回值共同构成了被调用函数的栈帕。 swap()函数分析1234567891011121314151617void swap(int x,int y)&#123; int z; z=x; x=y; y=z;&#125;main()&#123; int a=1; int b=2; swap(a,b); printf("%d %d\n",a,b); return 0;&#125; 我们知道，上面的那个swap()函数是不能实现将a,b交换的功能的，当swap()函数被调用的时候，a和b的值就被复制给了实参x和y，调用栈的情况如下： 栈帕(stack) 标识符(identifier) 地址(address) 值(value) swap z 106 -(未知值) y 105 2 x 104 1 返回位置 103 第15行 main b 102 2 a 101 1 x的值被储存在临时变量z中，之后y的值被赋值给x，z的值赋给了y，这三步之后，在swap()函数内x和y的值确实交换了，但是在swap()中第7行代码结束之后，并在栈帕出栈之前，栈内存是这样的： 栈帕(stack) 标识符(identifier) 地址(address) 值(value) swap z 106 1 y 105 2 x 104 1 返回位置 103 第15行 main b 102 2 a 101 1 当swap()函数结束之后，顶帕出栈，栈内存就变成了： 栈帕(stack) 标识符(identifier) 地址(address) 值(value) main b 102 2 a 101 1 swap()函数被调用完成，由上面的栈内存可以看出，a和b的值并没有改变。swap()函数并没有在main()函数中起作用。C语言程序在调用函数时使用“按值调用”的方式，这意味着值是从调用函数复制到被调用函数的实参中，这也是C语言函数调用的唯一方式。为此，C语言通过创建指针的概念来解决这个问题。]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[寄存器与指令]]></title>
-    <url>%2F2017%2F10%2F19%2F%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%8E%E6%8C%87%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[最近看汇编语言，顺便整理一下学了的指令以及寄存器，后面会逐步整理整理完善 寄存器(register) table th:first-of-type{ width: 100px; } 寄存器 作用 AX BX BX BX BX BX BX BX BX BX BX BX BX BX BX BX BX BX BX BX BX BX BX BX]]></content>
-      <tags>
-        <tag>assembly(汇编）</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[数电中的等式证明]]></title>
-    <url>%2F2017%2F10%2F16%2F%E6%95%B0%E7%94%B5%E4%B8%AD%E7%9A%84%E7%AD%89%E5%BC%8F%E8%AF%81%E6%98%8E%2F</url>
-    <content type="text"><![CDATA[在孙万蓉主编的《数字电路与系统设计》（高等教育出版社—ISBN-9787040426618）一书中43页有这样一个习题：用公式法证明A$\oplus$B$\oplus$C$\oplus$D=(A$\oplus$B)$\odot$(A$\oplus$C)$\odot$(A$\oplus$D),下面我给出非完全公式法的证明，用公式和结合真值表证明: A B C A$\odot$B$\odot$C A$\oplus$B$\oplus$C 0 0 0 0 0 0 0 1 1 1 0 1 0 1 1 0 1 1 0 0 1 0 0 1 1 1 0 1 0 0 1 1 0 0 0 1 1 1 1 1 先看真值表，由真值表得出三个数之间的异或等于三个数之间的同或，即有结论： A$\odot$B$\odot$C = A$\oplus$B$\oplus$C，因为 A$\oplus$A = 0 , A$\oplus$0 = A所以 A$\oplus$B$\oplus$C$\oplus$D = A$\oplus$B$\oplus$C$\oplus$D$\oplus$A$\oplus$A = (A$\oplus$B)$\oplus$(A$\oplus$C)$\oplus$(A$\oplus$D) = (A$\oplus$B)$\odot$(A$\oplus$C)$\odot$(A$\oplus$D)证毕！]]></content>
-      <tags>
-        <tag>数电 证明</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[linux]]></title>
-    <url>%2F2017%2F10%2F14%2Flinux%2F</url>
-    <content type="text"><![CDATA[## Directories Found On Linux Systems Directory Comments / The root directory. Where everything begins. /bin Contains binaries (programs) that must be present for the system to boot and run. /boot Contains the Linux kernel, initial RAM disk image (for drivers needed at boot time), and the boot loader.Interesting files: ● /boot/grub/grub.conf or menu.lst, whichare used to configure the boot loader. ● /boot/vmlinuz (or something similar), the Linux kernel /dev This is a special directory which contains device nodes.“Everything is a file” also applies to devices. Here is where the kernel maintains a list of all the devices it understands. /etc The /etc directory contains all of the system-wide configuration files. It also contains a collection of shell scripts which start each of the system services at boot time.Everything in this directory should be readable text.Interesting files: While everything in /etc is interesting,here are some all-time favorites:● /etc/crontab, a file that defines when automated jobs will run.● /etc/fstab, a table of storage devices and their associated mount points.● /etc/passwd, a list of the user accounts. /home In normal configurations, each user is given a directory in /home. Ordinary users can only write files in their home directories. This limitation protects the system from errant user activity. /lib Contains shared library files used by the core system programs. These are similar to DLLs in Windows. /lost+found Each formatted partition or device using a Linux file system,such as ext3, will have this directory. It is used in the case of a partial recovery from a file system corruption event.Unless something really bad has happened to your system,this directory will remain empty. /media On modern Linux systems the /media directory will contain the mount points for removable media such as USB drives, CD-ROMs, etc. that are mounted automatically at insertion. /mnt On older Linux systems, the /mnt directory contains mount points for removable devices that have been mounted manually. /opt The /opt directory is used to install “optional” software.This is mainly used to hold commercial software products that may be installed on your system. /proc The /proc directory is special. It’s not a real file system in the sense of files stored on your hard drive. Rather, it is a virtual file system maintained by the Linux kernel. The “files” it contains are peepholes into the kernel itself. The files are readable and will give you a picture of how the kernel sees your computer. /root This is the home directory for the root account. /sbin This directory contains “system” binaries. These are programs that perform vital system tasks that are generally reserved for the superuser. /tmp The /tmp directory is intended for storage of temporary,transient files created by various programs. Some configurations cause this directory to be emptied each time the system is rebooted. /usr The /usr directory tree is likely the largest one on a Linux system. It contains all the programs and support files used by regular users. /usr/bin /usr/bin contains the executable programs installed by your Linux distribution. It is not uncommon for this directory to hold thousands of programs./usr/lib The shared libraries for the programs in /usr/bin. /usr/local The /usr/local tree is where programs that are not included with your distribution but are intended for system-wide use are installed. Programs compiled from source code are normally installed in /usr/local/bin. On a newly installed Linux system, this tree exists, but it will be empty until the system administrator puts something in it. /usr/sbin Contains more system administration programs. /usr/share /usr/share contains all the shared data used by programs in /usr/bin. This includes things like default configuration files, icons, screen backgrounds, sound files,etc. /usr/share/doc Most packages installed on the system will include some kind of documentation. In /usr/share/doc, we will find documentation files organized by package. /var With the exception of /tmp and /home, the directories we have looked at so far remain relatively static, that is, their contents don’t change. The /var directory tree is where data that is likely to change is stored. Various databases,spool files, user mail, etc. are located here. /var/log /var/log contains log files, records of various system activity. These are very important and should be monitored from time to time. The most useful ones are /var/log/messages and/or /var/log/syslog.Note that for security reasons on some systems, you must be the superuser to view log files.]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[hello world]]></title>
-    <url>%2F2017%2F08%2F05%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[I’m new here.This is my first article.]]></content>
-  </entry>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[函数与栈]]></title>
+      <url>/2017/12/04/%E5%87%BD%E6%95%B0%E4%B8%8E%E6%A0%88/</url>
+      <content type="html"><![CDATA[<p>程序使用栈内存来记住函数返回的位置，每一个c程序都由栈控制其函数执行的流程。几乎所有计算机编程语言都采用这个方案。</p>
+<h2 id="栈的调用规则"><a href="#栈的调用规则" class="headerlink" title="栈的调用规则"></a>栈的调用规则</h2><p>①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。<br>②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。<br>③当一个函数结束之后，程序将从储存在调用栈顶部的行编号处继续。调用栈顶部的内容就会被弹出。<br>④如果函数有实参，那么实参是储存在返回位置之上的。<br>⑤如果函数有局部变量，那么局部变量被储存在实参之上<br>⑥如果一个函数返回了一个值，这个值就回被写到调用函数栈帕的一个局部变量中，这个变量的地址（叫做值地址）储存在调用栈中。<br>⑦实参和返回值共同构成了被调用函数的栈帕。</p>
+<h2 id="swap-函数分析"><a href="#swap-函数分析" class="headerlink" title="swap()函数分析"></a>swap()函数分析</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> z;</div><div class="line">	z=x;</div><div class="line">	x=y;</div><div class="line">	y=z;</div><div class="line">&#125;</div><div class="line"></div><div class="line">main()</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a=<span class="number">1</span>;</div><div class="line">	<span class="keyword">int</span> b=<span class="number">2</span>;</div><div class="line">	swap(a,b);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,a,b);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我们知道，上面的那个swap()函数是不能实现将a,b交换的功能的，当swap()函数被调用的时候，a和b的值就被复制给了实参x和y，调用栈的情况如下：<br></p>
+<table><br>    <tr><br>        <td>栈帕(stack)<br>        </td><td>标识符(identifier)<br>        </td><td>地址(address)<br>        </td><td>值(value)<br>    </td></tr><br>    <tr><br>        <td rowspan="4">swap<br>        </td><td>z<br>        </td><td>106<br>        </td><td>-(未知值)<br>    </td></tr><br>    <tr><br>        <td>y<br>        </td><td>105<br>        </td><td>2<br>    </td></tr><br>    <tr><br>        <td>x<br>        </td><td>104<br>        </td><td>1<br>    </td></tr><br>        <td>返回位置<br>        </td><td>103<br>        </td><td>第15行<br>    <br>    </td><tr><br>        <td rowspan="2">main<br>        </td><td>b<br>        </td><td>102<br>        </td><td>2<br>    </td></tr><br>    <tr><br>        <td>a<br>        </td><td>101<br>        </td><td>1<br>        </td></tr><br>    <br></table>
+
+<p>x的值被储存在临时变量z中，之后y的值被赋值给x，z的值赋给了y，这三步之后，在swap()函数内x和y的值确实交换了，但是在swap()中第7行代码结束之后，并在栈帕出<br>栈之前，栈内存是这样的：<br></p>
+<table><br>    <tr><br>        <td>栈帕(stack)<br>        </td><td>标识符(identifier)<br>        </td><td>地址(address)<br>        </td><td>值(value)<br>    </td></tr><br>    <tr><br>        <td rowspan="4">swap<br>        </td><td>z<br>        </td><td>106<br>        </td><td>1<br>    </td></tr><br>    <tr><br>        <td>y<br>        </td><td>105<br>        </td><td>2<br>    </td></tr><br>    <tr><br>        <td>x<br>        </td><td>104<br>        </td><td>1<br>    </td></tr><br>        <td>返回位置<br>        </td><td>103<br>        </td><td>第15行<br>    <br>    </td><tr><br>        <td rowspan="2">main<br>        </td><td>b<br>        </td><td>102<br>        </td><td>2<br>    </td></tr><br>    <tr><br>        <td>a<br>        </td><td>101<br>        </td><td>1<br>        </td></tr><br>    <br></table>
+
+<p>当swap()函数结束之后，顶帕出栈，栈内存就变成了：<br></p>
+<table><br>    <tr><br>        <td>栈帕(stack)<br>        </td><td>标识符(identifier)<br>        </td><td>地址(address)<br>        </td><td>值(value)<br>    </td></tr><br>    <tr><br>        <td rowspan="2">main<br>        </td><td>b<br>        </td><td>102<br>        </td><td>2<br>    </td></tr><br>    <tr><br>        <td>a<br>        </td><td>101<br>        </td><td>1<br>        </td></tr><br>    <br></table>
+
+<p>swap()函数被调用完成，由上面的栈内存可以看出，a和b的值并没有改变。swap()函数并没有在main()函数中起作用。C语言程序在<br>调用函数时使用“按值调用”的方式，这意味着值是从调用函数复制到被调用函数的实参中，这也是C语言函数调用的唯一方式。为此，C语言通过创建指针的概念来解决这个问题。</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[寄存器与指令]]></title>
+      <url>/2017/10/19/%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%8E%E6%8C%87%E4%BB%A4/</url>
+      <content type="html"><![CDATA[<p>最近看汇编语言，顺便整理一下学了的指令以及寄存器，后面会逐步整理整理完善</p>
+<h2 id="寄存器-register"><a href="#寄存器-register" class="headerlink" title="寄存器(register)"></a>寄存器(register)</h2><style>
+    table th:first-of-type{
+        width: 100px;
+        }
+</style>
+
+<table><br>    <thead><br>    <tr><br>        <th>寄存器</th><br>        <th>作用</th><br>    </tr><br>    </thead><br><br>    <tbody><br>    <tr><br>        <td>AX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    <tr><br>        <td>BX<br>        </td><td><br>    </td></tr><br>    </tbody><br></table>
+
+
+
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> assembly(汇编） </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[数电中的等式证明]]></title>
+      <url>/2017/10/16/%E6%95%B0%E7%94%B5%E4%B8%AD%E7%9A%84%E7%AD%89%E5%BC%8F%E8%AF%81%E6%98%8E/</url>
+      <content type="html"><![CDATA[<p>在孙万蓉主编的《数字电路与系统设计》（高等教育出版社—ISBN-9787040426618）一书中43页有这样一个习题：用公式法证明<br>A$\oplus$B$\oplus$C$\oplus$D=(A$\oplus$B)$\odot$(A$\oplus$C)$\odot$(A$\oplus$D),下面我给出非完全公式法的证明，<br>用公式和结合真值表证明:</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>A$\odot$B$\odot$C</th>
+<th>A$\oplus$B$\oplus$C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>先看真值表，由真值表得出三个数之间的异或等于三个数之间的同或，<br>即有结论：  A$\odot$B$\odot$C = A$\oplus$B$\oplus$C，<br>因为        A$\oplus$A = 0 , A$\oplus$0 = A<br>所以        A$\oplus$B$\oplus$C$\oplus$D = A$\oplus$B$\oplus$C$\oplus$D$\oplus$A$\oplus$A = (A$\oplus$B)$\oplus$(A$\oplus$C)$\oplus$(A$\oplus$D) = (A$\oplus$B)$\odot$(A$\oplus$C)$\odot$(A$\oplus$D)<br>证毕！</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 数电 证明 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[linux]]></title>
+      <url>/2017/10/14/linux/</url>
+      <content type="html"><![CDATA[<p>##</p>
+<h2 id="Directories-Found-On-Linux-Systems"><a href="#Directories-Found-On-Linux-Systems" class="headerlink" title="Directories Found On Linux Systems"></a>Directories Found On Linux Systems</h2><table>
+<thead>
+<tr>
+<th>Directory</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/</td>
+<td>The root directory. Where everything begins.</td>
+</tr>
+<tr>
+<td>/bin</td>
+<td>Contains binaries (programs) that must be present for the system to boot and run.</td>
+</tr>
+<tr>
+<td>/boot</td>
+<td>Contains the Linux kernel, initial RAM disk image (for drivers needed at boot time), and the boot loader.Interesting files:<br>    ● /boot/grub/grub.conf or menu.lst, which<br>are used to configure the boot loader.<br>    ● /boot/vmlinuz (or something similar), the Linux kernel</td>
+</tr>
+<tr>
+<td>/dev</td>
+<td>This is a special directory which contains device nodes.“Everything is a file” also applies to devices. Here is where the kernel maintains a list of all the devices it understands.</td>
+</tr>
+<tr>
+<td>/etc</td>
+<td>The /etc directory contains all of the system-wide configuration files. It also contains a collection of shell scripts which start each of the system services at boot time.Everything in this directory should be readable text.Interesting files: While everything in /etc is interesting,here are some all-time favorites:<br>● /etc/crontab, a file that defines when automated jobs will run.<br>● /etc/fstab, a table of storage devices and their associated mount points.<br>● /etc/passwd, a list of the user accounts.</td>
+</tr>
+<tr>
+<td>/home</td>
+<td>In normal configurations, each user is given a directory in /home. Ordinary users can only write files in their home directories. This limitation protects the system from errant user activity.</td>
+</tr>
+<tr>
+<td>/lib</td>
+<td>Contains shared library files used by the core system programs. These are similar to DLLs in Windows.</td>
+</tr>
+<tr>
+<td>/lost+found</td>
+<td>Each formatted partition or device using a Linux file system,such as ext3, will have this directory. It is used in the case of a partial recovery from a file system corruption event.Unless something really bad has happened to your system,this directory will remain empty.</td>
+</tr>
+<tr>
+<td>/media</td>
+<td>On modern Linux systems the /media directory will contain the mount points for removable media such as USB drives, CD-ROMs, etc. that are mounted automatically at insertion.</td>
+</tr>
+<tr>
+<td>/mnt</td>
+<td>On older Linux systems, the /mnt directory contains mount points for removable devices that have been mounted manually.</td>
+</tr>
+<tr>
+<td>/opt</td>
+<td>The /opt directory is used to install “optional” software.This is mainly used to hold commercial software products that may be installed on your system.</td>
+</tr>
+<tr>
+<td>/proc</td>
+<td>The /proc directory is special. It’s not a real file system in the sense of files stored on your hard drive. Rather, it is a virtual file system maintained by the Linux kernel. The “files” it contains are peepholes into the kernel itself. The files are readable and will give you a picture of how the kernel sees your computer.</td>
+</tr>
+<tr>
+<td>/root</td>
+<td>This is the home directory for the root account.</td>
+</tr>
+<tr>
+<td>/sbin</td>
+<td>This directory contains “system” binaries. These are programs that perform vital system tasks that are generally reserved for the superuser.</td>
+</tr>
+<tr>
+<td>/tmp</td>
+<td>The /tmp directory is intended for storage of temporary,transient files created by various programs. Some configurations cause this directory to be emptied each time the system is rebooted.</td>
+</tr>
+<tr>
+<td>/usr</td>
+<td>The /usr directory tree is likely the largest one on a Linux system. It contains all the programs and support files used by regular users.</td>
+</tr>
+<tr>
+<td>/usr/bin</td>
+<td>/usr/bin contains the executable programs installed by your Linux distribution. It is not uncommon for this directory to hold thousands of programs./usr/lib The shared libraries for the programs in /usr/bin.</td>
+</tr>
+<tr>
+<td>/usr/local</td>
+<td>The /usr/local tree is where programs that are not included with your distribution but are intended for system-wide use are installed. Programs compiled from source code are normally installed in /usr/local/bin. On a newly installed Linux system, this tree exists, but it will be empty until the system administrator puts something in it.</td>
+</tr>
+<tr>
+<td>/usr/sbin</td>
+<td>Contains more system administration programs.</td>
+</tr>
+<tr>
+<td>/usr/share</td>
+<td>/usr/share contains all the shared data used by programs in /usr/bin. This includes things like default configuration files, icons, screen backgrounds, sound files,etc.</td>
+</tr>
+<tr>
+<td>/usr/share/doc</td>
+<td>Most packages installed on the system will include some kind of documentation. In /usr/share/doc, we will find documentation files organized by package.</td>
+</tr>
+<tr>
+<td>/var</td>
+<td>With the exception of /tmp and /home, the directories we have looked at so far remain relatively static, that is, their contents don’t change. The /var directory tree is where data that is likely to change is stored. Various databases,spool files, user mail, etc. are located here.</td>
+</tr>
+<tr>
+<td>/var/log</td>
+<td>/var/log contains log files, records of various system activity. These are very important and should be monitored from time to time. The most useful ones are /var/log/messages and/or /var/log/syslog.Note that for security reasons on some systems, you must be the superuser to view log files.</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[hello world]]></title>
+      <url>/2017/08/05/hello-world/</url>
+      <content type="html"><![CDATA[<center><p>I’m new here.This is my first article.</p></center>]]></content>
+      
+        
+    </entry>
+    
+  
+  
 </search>
