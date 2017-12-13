@@ -55,7 +55,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=none" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="youngseaz" />
@@ -67,7 +67,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=none" />
 
 
 
@@ -93,7 +93,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.2',
+    version: 'none',
     sidebar: {"position":"left","display":"hide","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
@@ -203,6 +203,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            Commonweal 404
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -222,26 +232,22 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Input searching key words" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -299,7 +305,7 @@
           
   <div class="comments" id="comments">
     
-    <div onclick="showGitment()" id="gitment_title" class="gitment_title">show Gitment comments</div>
+    <div onclick="showGitment()" id="gitment_title" class="gitment_title">click here to show comments</div>
     <div id="container" style="display:none"></div>
     <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
@@ -483,11 +489,11 @@ var ap = new APlayer({
 </div>
 
 
-  <div class="powered-by">study undefined</div>
+  <div class="powered-by">study re</div>
 
   <span class="post-meta-divider">|</span>
 
-  <div class="theme-info">test &mdash;  v5.1.2</div>
+  <div class="theme-info">test &mdash;  none</div>
 
 
         
@@ -591,9 +597,9 @@ var ap = new APlayer({
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=none"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=none"></script>
 
 
 
@@ -601,14 +607,14 @@ var ap = new APlayer({
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=none"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=none"></script>
 
 
 
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=none"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=none"></script>
 
 
   
@@ -616,7 +622,7 @@ var ap = new APlayer({
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=none"></script>
 
 
 
@@ -969,19 +975,6 @@ var ap = new APlayer({
   </script>
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
 
 
 
