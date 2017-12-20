@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo搭建博客中出现的问题以及解决方法]]></title>
+    <url>%2F2017%2F12%2F20%2Fhexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[hexo对html的table标签不兼容写文章时使用html的table做表格会发现文章被渲染出多个&lt;br&gt;,导致表格与其前面有很多空白的地方，十分不美观， 解决方法： 在hexo目录下_config.yml添加 123marked: gfm: true break: false 参考 $f(x)=x+a$,$\oplus$]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[爬虫学习]]></title>
+    <url>%2F2017%2F12%2F19%2F%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[Python2.X和Python3.X调用urllib库常见的变化 Python2.X Python3.X import urllib2 import urllib.request,urllib.error import urllib import urllib.request,urllib.error,urllib.parse import urlparse import urllib.parse urllib2.open urllib.request.open urllib.urlencode urllib.parse.urlencode urllib.quote urllib.request.quote cookielib.CookieJar http.CookieJar urllib2.Request urllib.request.Request 修改报头当网站网页禁止（403 forbidden）使用Python urllib库中默认的报头(headers)，我们需要修改报头 使用build_opener()修改报头以下是实现这种方法的一段代码： 123456import urllib.requesturl = ("a url")headers = ("User-Agent","the details of User-Agent")opener = urllib.request.build_opener()opener.addheaders = [headers]data = opener.open(url).read() 使用add_header()添加报头使用urllib.request.Request()下的add_header()修改UA。 实现浏览器的模拟， 以下是实现这种方法的一段代码： 12345import urllib.requesturl = "a url"req = urllib.request.Request(url)req.add_header("User-Agent","the details of User-Agent")data = urllib.request.urlopen(req).read()]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[函数与栈]]></title>
     <url>%2F2017%2F12%2F04%2F%E5%87%BD%E6%95%B0%E4%B8%8E%E6%A0%88%2F</url>
     <content type="text"><![CDATA[程序使用栈内存来记住函数返回的位置，每一个c程序都由栈控制其函数执行的流程。几乎所有计算机编程语言都采用这个方案。 栈的调用规则①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。 ②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。 ③当一个函数结束之后，程序将从储存在调用栈顶部的行编号处继续。调用栈顶部的内容就会被弹出。 ④如果函数有实参，那么实参是储存在返回位置之上的。 ⑤如果函数有局部变量，那么局部变量被储存在实参之上 ⑥如果一个函数返回了一个值，这个值就回被写到调用函数栈帕的一个局部变量中，这个变量的地址（叫做值地址）储存在调用栈中。 ⑦实参和返回值共同构成了被调用函数的栈帕。 swap()函数分析1234567891011121314151617void swap(int x,int y)&#123; int z; z=x; x=y; y=z;&#125;main()&#123; int a=1; int b=2; swap(a,b); printf("%d %d\n",a,b); return 0;&#125; 我们知道，上面的那个swap()函数是不能实现将a,b交换的功能的，当swap()函数被调用的时候，a和b的值就被复制给了实参x和y，调用栈的情况如下： 栈帕(stack) 标识符(identifier) 地址(address) 值(value) swap z 106 -(未知值) y 105 2 x 104 1 返回位置 103 第15行 main b 102 2 a 101 1 x的值被储存在临时变量z中，之后y的值被赋值给x，z的值赋给了y，这三步之后，在swap()函数内x和y的值确实交换了，但是在swap()中第7行代码结束之后，并在栈帕出 栈之前，栈内存是这样的： 栈帕(stack) 标识符(identifier) 地址(address) 值(value) swap z 106 1 y 105 2 x 104 1 返回位置 103 第15行 main b 102 2 a 101 1 当swap()函数结束之后，顶帕出栈，栈内存就变成了： 栈帕(stack) 标识符(identifier) 地址(address) 值(value) main b 102 2 a 101 1 swap()函数被调用完成，由上面的栈内存可以看出，a和b的值并没有改变。swap()函数并没有在main()函数中起作用。C语言程序在 调用函数时使用“按值调用”的方式，这意味着值是从调用函数复制到被调用函数的实参中，这也是C语言函数调用的唯一方式。为此，C语言通过创建指针的概念来解决这个问题。]]></content>
