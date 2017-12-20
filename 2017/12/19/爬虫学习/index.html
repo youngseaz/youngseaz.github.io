@@ -74,17 +74,17 @@
 
 
 
-<meta name="description" content="Python2.X和Python3.X调用urllib库常见的变化    Python2.X Python3.X     import urllib2 import urllib.request,urllib.error   import urllib import urllib.request,urllib.error,urllib.parse   import urlparse import">
+<meta name="description" content="Python2.X和Python3.X调用urllib库常见的变化   Python2.X Python3.X     import urllib2 import urllib.request,urllib.error   import urllib import urllib.request,urllib.error,urllib.parse   import urlparse import u">
 <meta property="og:type" content="article">
 <meta property="og:title" content="爬虫学习">
 <meta property="og:url" content="http://youngseaz.com/2017/12/19/爬虫学习/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="Python2.X和Python3.X调用urllib库常见的变化    Python2.X Python3.X     import urllib2 import urllib.request,urllib.error   import urllib import urllib.request,urllib.error,urllib.parse   import urlparse import">
+<meta property="og:description" content="Python2.X和Python3.X调用urllib库常见的变化   Python2.X Python3.X     import urllib2 import urllib.request,urllib.error   import urllib import urllib.request,urllib.error,urllib.parse   import urlparse import u">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2017-12-20T09:20:24.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爬虫学习">
-<meta name="twitter:description" content="Python2.X和Python3.X调用urllib库常见的变化    Python2.X Python3.X     import urllib2 import urllib.request,urllib.error   import urllib import urllib.request,urllib.error,urllib.parse   import urlparse import">
+<meta name="twitter:description" content="Python2.X和Python3.X调用urllib库常见的变化   Python2.X Python3.X     import urllib2 import urllib.request,urllib.error   import urllib import urllib.request,urllib.error,urllib.parse   import urlparse import u">
 
 
 
@@ -394,8 +394,7 @@
       
 
       
-        <h1 id="python2x和python3x调用urllib库常见的变化"><a class="markdownIt-Anchor" href="#python2x和python3x调用urllib库常见的变化"></a> Python2.X和Python3.X调用urllib库常见的变化</h1>
-<table>
+        <h1 id="Python2-X和Python3-X调用urllib库常见的变化"><a href="#Python2-X和Python3-X调用urllib库常见的变化" class="headerlink" title="Python2.X和Python3.X调用urllib库常见的变化"></a>Python2.X和Python3.X调用urllib库常见的变化</h1><table>
 <thead>
 <tr>
 <th style="text-align:center">Python2.X</th>
@@ -437,16 +436,14 @@
 </tr>
 </tbody>
 </table>
-<h1 id="修改报头"><a class="markdownIt-Anchor" href="#修改报头"></a> 修改报头</h1>
-<p>当网站网页禁止（403 forbidden）使用Python urllib库中默认的报头(headers)，我们需要修改报头</p>
-<h2 id="使用build_opener修改报头"><a class="markdownIt-Anchor" href="#使用build_opener修改报头"></a> 使用build_opener()修改报头</h2>
-<p>以下是实现这种方法的一段代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib.request</div><div class="line">url = (<span class="string">"a url"</span>)</div><div class="line">headers = (<span class="string">"User-Agent"</span>,<span class="string">"the details of User-Agent"</span>)</div><div class="line">opener = urllib.request.build_opener()</div><div class="line">opener.addheaders = [headers]</div><div class="line">data = opener.open(url).read()</div></pre></td></tr></table></figure>
-<h2 id="使用add_header添加报头"><a class="markdownIt-Anchor" href="#使用add_header添加报头"></a> 使用add_header()添加报头</h2>
-<p>使用urllib.request.Request()下的add_header()修改UA。<br><br>
-实现浏览器的模拟，<br>
-以下是实现这种方法的一段代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib.request</div><div class="line">url = <span class="string">"a url"</span></div><div class="line">req = urllib.request.Request(url)</div><div class="line">req.add_header(<span class="string">"User-Agent"</span>,<span class="string">"the details of User-Agent"</span>)</div><div class="line">data = urllib.request.urlopen(req).read()</div></pre></td></tr></table></figure>
+<h1 id="修改报头"><a href="#修改报头" class="headerlink" title="修改报头"></a>修改报头</h1><p>当网站网页禁止（403 forbidden）使用Python urllib库中默认的报头(headers)，我们需要修改报头</p>
+<h2 id="使用build-opener-修改报头"><a href="#使用build-opener-修改报头" class="headerlink" title="使用build_opener()修改报头"></a>使用build_opener()修改报头</h2><p>以下是实现这种方法的一段代码：
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib.request</div><div class="line">url = (<span class="string">"a url"</span>)</div><div class="line">headers = (<span class="string">"User-Agent"</span>,<span class="string">"the details of User-Agent"</span>)</div><div class="line">opener = urllib.request.build_opener()</div><div class="line">opener.addheaders = [headers]</div><div class="line">data = opener.open(url).read()</div></pre></td></tr></table></figure></p>
+<h2 id="使用add-header-添加报头"><a href="#使用add-header-添加报头" class="headerlink" title="使用add_header()添加报头"></a>使用add_header()添加报头</h2><p>使用urllib.request.Request()下的add_header()修改UA。<br>
+实现浏览器的模拟，
+以下是实现这种方法的一段代码：
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib.request</div><div class="line">url = <span class="string">"a url"</span></div><div class="line">req = urllib.request.Request(url)</div><div class="line">req.add_header(<span class="string">"User-Agent"</span>,<span class="string">"the details of User-Agent"</span>)</div><div class="line">data = urllib.request.urlopen(req).read()</div></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -725,7 +722,7 @@ var ap = new APlayer({
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python2x和python3x调用urllib库常见的变化"><span class="nav-number">1.</span> <span class="nav-text"><a class="markdownIt-Anchor" href="#python2x&#x548C;python3x&#x8C03;&#x7528;urllib&#x5E93;&#x5E38;&#x89C1;&#x7684;&#x53D8;&#x5316;"></a> Python2.X&#x548C;Python3.X&#x8C03;&#x7528;urllib&#x5E93;&#x5E38;&#x89C1;&#x7684;&#x53D8;&#x5316;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改报头"><span class="nav-number">2.</span> <span class="nav-text"><a class="markdownIt-Anchor" href="#&#x4FEE;&#x6539;&#x62A5;&#x5934;"></a> &#x4FEE;&#x6539;&#x62A5;&#x5934;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用build_opener修改报头"><span class="nav-number">2.1.</span> <span class="nav-text"><a class="markdownIt-Anchor" href="#&#x4F7F;&#x7528;build_opener&#x4FEE;&#x6539;&#x62A5;&#x5934;"></a> &#x4F7F;&#x7528;build_opener()&#x4FEE;&#x6539;&#x62A5;&#x5934;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用add_header添加报头"><span class="nav-number">2.2.</span> <span class="nav-text"><a class="markdownIt-Anchor" href="#&#x4F7F;&#x7528;add_header&#x6DFB;&#x52A0;&#x62A5;&#x5934;"></a> &#x4F7F;&#x7528;add_header()&#x6DFB;&#x52A0;&#x62A5;&#x5934;</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python2-X和Python3-X调用urllib库常见的变化"><span class="nav-number">1.</span> <span class="nav-text"><a href="#Python2-X&#x548C;Python3-X&#x8C03;&#x7528;urllib&#x5E93;&#x5E38;&#x89C1;&#x7684;&#x53D8;&#x5316;" class="headerlink" title="Python2.X&#x548C;Python3.X&#x8C03;&#x7528;urllib&#x5E93;&#x5E38;&#x89C1;&#x7684;&#x53D8;&#x5316;"></a>Python2.X&#x548C;Python3.X&#x8C03;&#x7528;urllib&#x5E93;&#x5E38;&#x89C1;&#x7684;&#x53D8;&#x5316;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改报头"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x4FEE;&#x6539;&#x62A5;&#x5934;" class="headerlink" title="&#x4FEE;&#x6539;&#x62A5;&#x5934;"></a>&#x4FEE;&#x6539;&#x62A5;&#x5934;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用build-opener-修改报头"><span class="nav-number">2.1.</span> <span class="nav-text"><a href="#&#x4F7F;&#x7528;build-opener-&#x4FEE;&#x6539;&#x62A5;&#x5934;" class="headerlink" title="&#x4F7F;&#x7528;build_opener()&#x4FEE;&#x6539;&#x62A5;&#x5934;"></a>&#x4F7F;&#x7528;build_opener()&#x4FEE;&#x6539;&#x62A5;&#x5934;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用add-header-添加报头"><span class="nav-number">2.2.</span> <span class="nav-text"><a href="#&#x4F7F;&#x7528;add-header-&#x6DFB;&#x52A0;&#x62A5;&#x5934;" class="headerlink" title="&#x4F7F;&#x7528;add_header()&#x6DFB;&#x52A0;&#x62A5;&#x5934;"></a>&#x4F7F;&#x7528;add_header()&#x6DFB;&#x52A0;&#x62A5;&#x5934;</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -763,7 +760,7 @@ var ap = new APlayer({
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      1.9k
+      2.0k
     </span>
   
 </div>
