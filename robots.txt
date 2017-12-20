@@ -1,0 +1,8 @@
+User-agent: * 
+Allow: /
+Disallow: /js/
+Disallow: /css/
+Disallow: /lib/
+
+Sitemap: youngseaz.com/sitemap.xml
+Sitemap: youngseaz.com/baidusitemap.xml

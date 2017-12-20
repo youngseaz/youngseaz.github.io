@@ -74,17 +74,17 @@
 
 
 
-<meta name="description" content="程序使用栈内存来记住函数返回的位置，每一个c程序都由栈控制其函数执行的流程。几乎所有计算机编程语言都采用这个方案。 栈的调用规则①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。 ②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。 ③当一个函数结束之后，程序">
+<meta name="description" content="程序使用栈内存来记住函数返回的位置，每一个c程序都由栈控制其函数执行的流程。几乎所有计算机编程语言都采用这个方案。  栈的调用规则 ①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。 ②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。 ③当一个函数结束之后，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="函数与栈">
 <meta property="og:url" content="http://youngseaz.com/2017/12/04/函数与栈/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="程序使用栈内存来记住函数返回的位置，每一个c程序都由栈控制其函数执行的流程。几乎所有计算机编程语言都采用这个方案。 栈的调用规则①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。 ②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。 ③当一个函数结束之后，程序">
+<meta property="og:description" content="程序使用栈内存来记住函数返回的位置，每一个c程序都由栈控制其函数执行的流程。几乎所有计算机编程语言都采用这个方案。  栈的调用规则 ①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。 ②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。 ③当一个函数结束之后，">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2017-12-04T11:28:03.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数与栈">
-<meta name="twitter:description" content="程序使用栈内存来记住函数返回的位置，每一个c程序都由栈控制其函数执行的流程。几乎所有计算机编程语言都采用这个方案。 栈的调用规则①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。 ②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。 ③当一个函数结束之后，程序">
+<meta name="twitter:description" content="程序使用栈内存来记住函数返回的位置，每一个c程序都由栈控制其函数执行的流程。几乎所有计算机编程语言都采用这个方案。  栈的调用规则 ①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。 ②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。 ③当一个函数结束之后，">
 
 
 
@@ -369,7 +369,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  727
+                  684
                 </span>
               
 
@@ -395,122 +395,121 @@
 
       
         <p>程序使用栈内存来记住函数返回的位置，每一个c程序都由栈控制其函数执行的流程。几乎所有计算机编程语言都采用这个方案。</p>
-<h2 id="栈的调用规则"><a href="#栈的调用规则" class="headerlink" title="栈的调用规则"></a>栈的调用规则</h2><p>①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。
-②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。
-③当一个函数结束之后，程序将从储存在调用栈顶部的行编号处继续。调用栈顶部的内容就会被弹出。
-④如果函数有实参，那么实参是储存在返回位置之上的。
-⑤如果函数有局部变量，那么局部变量被储存在实参之上
-⑥如果一个函数返回了一个值，这个值就回被写到调用函数栈帕的一个局部变量中，这个变量的地址（叫做值地址）储存在调用栈中。
+<h2 id="栈的调用规则"><a class="markdownIt-Anchor" href="#栈的调用规则"></a> 栈的调用规则</h2>
+<p>①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。<br>
+②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。<br>
+③当一个函数结束之后，程序将从储存在调用栈顶部的行编号处继续。调用栈顶部的内容就会被弹出。<br>
+④如果函数有实参，那么实参是储存在返回位置之上的。<br>
+⑤如果函数有局部变量，那么局部变量被储存在实参之上<br>
+⑥如果一个函数返回了一个值，这个值就回被写到调用函数栈帕的一个局部变量中，这个变量的地址（叫做值地址）储存在调用栈中。<br>
 ⑦实参和返回值共同构成了被调用函数的栈帕。</p>
-<h2 id="swap-函数分析"><a href="#swap-函数分析" class="headerlink" title="swap()函数分析"></a>swap()函数分析</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> z;</div><div class="line">	z=x;</div><div class="line">	x=y;</div><div class="line">	y=z;</div><div class="line">&#125;</div><div class="line"></div><div class="line">main()</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a=<span class="number">1</span>;</div><div class="line">	<span class="keyword">int</span> b=<span class="number">2</span>;</div><div class="line">	swap(a,b);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,a,b);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="swap函数分析"><a class="markdownIt-Anchor" href="#swap函数分析"></a> swap()函数分析</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> z;</div><div class="line">	z=x;</div><div class="line">	x=y;</div><div class="line">	y=z;</div><div class="line">&#125;</div><div class="line"></div><div class="line">main()</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a=<span class="number">1</span>;</div><div class="line">	<span class="keyword">int</span> b=<span class="number">2</span>;</div><div class="line">	swap(a,b);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,a,b);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>我们知道，上面的那个swap()函数是不能实现将a,b交换的功能的，当swap()函数被调用的时候，a和b的值就被复制给了实参x和y，调用栈的情况如下：<br></p>
 <table>
-    <tr>
-        <td>栈帕(stack)
-        </td><td>标识符(identifier)
-        </td><td>地址(address)
-        </td><td>值(value)
-    </td></tr>
-    <tr>
-        <td rowspan="4">swap
-        </td><td>z
-        </td><td>106
-        </td><td>-(未知值)
-    </td></tr>
-    <tr>
-        <td>y
-        </td><td>105
-        </td><td>2
-    </td></tr>
-    <tr>
-        <td>x
-        </td><td>104
-        </td><td>1
-    </td></tr>
-        <td>返回位置
-        </td><td>103
-        </td><td>第15行
-    
-    </td><tr>
-        <td rowspan="2">main
-        </td><td>b
-        </td><td>102
-        </td><td>2
-    </td></tr>
-    <tr>
-        <td>a
-        </td><td>101
-        </td><td>1
-        </td></tr>
-    
+	<tr>
+		<td>栈帕(stack)
+		</td><td>标识符(identifier)
+		</td><td>地址(address)
+		</td><td>值(value)
+	</td></tr>
+	<tr>
+		<td rowspan="4">swap
+		</td><td>z
+		</td><td>106
+		</td><td>-(未知值)
+	</td></tr>
+	<tr>
+		<td>y
+		</td><td>105
+		</td><td>2
+	</td></tr>
+	<tr>
+		<td>x
+		</td><td>104
+		</td><td>1
+	</td></tr>
+		<td>返回位置
+		</td><td>103
+		</td><td>第15行
+	
+	</td><tr>
+		<td rowspan="2">main
+		</td><td>b
+		</td><td>102
+		</td><td>2
+	</td></tr>
+	<tr>
+		<td>a
+		</td><td>101
+		</td><td>1
+		</td></tr>
+	
 </table>
-
-<p>x的值被储存在临时变量z中，之后y的值被赋值给x，z的值赋给了y，这三步之后，在swap()函数内x和y的值确实交换了，但是在swap()中第7行代码结束之后，并在栈帕出
+<p>x的值被储存在临时变量z中，之后y的值被赋值给x，z的值赋给了y，这三步之后，在swap()函数内x和y的值确实交换了，但是在swap()中第7行代码结束之后，并在栈帕出<br>
 栈之前，栈内存是这样的：<br></p>
 <table>
-    <tr>
-        <td>栈帕(stack)
-        </td><td>标识符(identifier)
-        </td><td>地址(address)
-        </td><td>值(value)
-    </td></tr>
-    <tr>
-        <td rowspan="4">swap
-        </td><td>z
-        </td><td>106
-        </td><td>1
-    </td></tr>
-    <tr>
-        <td>y
-        </td><td>105
-        </td><td>2
-    </td></tr>
-    <tr>
-        <td>x
-        </td><td>104
-        </td><td>1
-    </td></tr>
-        <td>返回位置
-        </td><td>103
-        </td><td>第15行
-    
-    </td><tr>
-        <td rowspan="2">main
-        </td><td>b
-        </td><td>102
-        </td><td>2
-    </td></tr>
-    <tr>
-        <td>a
-        </td><td>101
-        </td><td>1
-        </td></tr>
-    
+	<tr>
+		<td>栈帕(stack)
+		</td><td>标识符(identifier)
+		</td><td>地址(address)
+		</td><td>值(value)
+	</td></tr>
+	<tr>
+		<td rowspan="4">swap
+		</td><td>z
+		</td><td>106
+		</td><td>1
+	</td></tr>
+	<tr>
+		<td>y
+		</td><td>105
+		</td><td>2
+	</td></tr>
+	<tr>
+		<td>x
+		</td><td>104
+		</td><td>1
+	</td></tr>
+		<td>返回位置
+		</td><td>103
+		</td><td>第15行
+	
+	</td><tr>
+		<td rowspan="2">main
+		</td><td>b
+		</td><td>102
+		</td><td>2
+	</td></tr>
+	<tr>
+		<td>a
+		</td><td>101
+		</td><td>1
+		</td></tr>
+	
 </table>
-
 <p>当swap()函数结束之后，顶帕出栈，栈内存就变成了：<br></p>
 <table>
-    <tr>
-        <td>栈帕(stack)
-        </td><td>标识符(identifier)
-        </td><td>地址(address)
-        </td><td>值(value)
-    </td></tr>
-    <tr>
-        <td rowspan="2">main
-        </td><td>b
-        </td><td>102
-        </td><td>2
-    </td></tr>
-    <tr>
-        <td>a
-        </td><td>101
-        </td><td>1
-        </td></tr>
-    
+	<tr>
+		<td>栈帕(stack)
+		</td><td>标识符(identifier)
+		</td><td>地址(address)
+		</td><td>值(value)
+	</td></tr>
+	<tr>
+		<td rowspan="2">main
+		</td><td>b
+		</td><td>102
+		</td><td>2
+	</td></tr>
+	<tr>
+		<td>a
+		</td><td>101
+		</td><td>1
+		</td></tr>
+	
 </table>
-
-<p>swap()函数被调用完成，由上面的栈内存可以看出，a和b的值并没有改变。swap()函数并没有在main()函数中起作用。C语言程序在
+<p>swap()函数被调用完成，由上面的栈内存可以看出，a和b的值并没有改变。swap()函数并没有在main()函数中起作用。C语言程序在<br>
 调用函数时使用“按值调用”的方式，这意味着值是从调用函数复制到被调用函数的实参中，这也是C语言函数调用的唯一方式。为此，C语言通过创建指针的概念来解决这个问题。</p>
 
       
@@ -791,7 +790,7 @@ var ap = new APlayer({
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#栈的调用规则"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x6808;&#x7684;&#x8C03;&#x7528;&#x89C4;&#x5219;" class="headerlink" title="&#x6808;&#x7684;&#x8C03;&#x7528;&#x89C4;&#x5219;"></a>&#x6808;&#x7684;&#x8C03;&#x7528;&#x89C4;&#x5219;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swap-函数分析"><span class="nav-number">2.</span> <span class="nav-text"><a href="#swap-&#x51FD;&#x6570;&#x5206;&#x6790;" class="headerlink" title="swap()&#x51FD;&#x6570;&#x5206;&#x6790;"></a>swap()&#x51FD;&#x6570;&#x5206;&#x6790;</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#栈的调用规则"><span class="nav-number">1.</span> <span class="nav-text"><a class="markdownIt-Anchor" href="#&#x6808;&#x7684;&#x8C03;&#x7528;&#x89C4;&#x5219;"></a> &#x6808;&#x7684;&#x8C03;&#x7528;&#x89C4;&#x5219;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swap函数分析"><span class="nav-number">2.</span> <span class="nav-text"><a class="markdownIt-Anchor" href="#swap&#x51FD;&#x6570;&#x5206;&#x6790;"></a> swap()&#x51FD;&#x6570;&#x5206;&#x6790;</span></a></li></ol></div>
             
 
           </div>
@@ -829,7 +828,7 @@ var ap = new APlayer({
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
     <span title="Site words total count">
-      2.0k
+      1.9k
     </span>
   
 </div>
