@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ubuntu重置密码出现的问题]]></title>
+    <url>%2F2018%2F02%2F23%2Fubuntu%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[忘记ubuntu的密码之后，按照网上的一般方式进入recovery mode，然后选择drop to root shell prompt，但是进去之后提示Give root password for maintenance (要输入密码,可是自己就是要通过这种方式找回密码的)，网上找了许久，发现以下方法方法有效： 重启之后运行如下命令即可 相关参考: https://www.youtube.com/watch?v=ThPAWo7e8LI https://help.ubuntu.com/community/LostPassword]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[利用vps搭建ss服务器]]></title>
     <url>%2F2018%2F02%2F22%2F%E5%88%A9%E7%94%A8vps%E6%90%AD%E5%BB%BAss%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
     <content type="text"><![CDATA[参考别人的文件发现搭建一个ss（shadowsocks）服务器是很简单的，利用vps（virtual private server）就可以，此文以 vultr的vps为例: 注册账号，然后充值（支持支付宝） 然后点击Servers，再点击图片中的加号添加服务器 之后就是登录服务器部署，登录之前先从server details看一看登录服务器要用到的用户名、密码以及ip地址，可以从view console登录服务器，也可以使用 Putty登录 登录服务器之后运行以下三条命令 123wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.shchmod +x shadowsocks.sh./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log 三条命令运行成功之后，按照提示设置密码、端口和选择加密方式，成功安装之后会显示你的配置信息，之后下载客户端，输入配置信息就可以使用啦 相关链接： link for downloading shadowsocks 参考： https://www.jianshu.com/p/1c82ee1293a4 https://teddysun.com/342.html]]></content>
