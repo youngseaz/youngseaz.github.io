@@ -3,46 +3,16 @@
   
     
     <entry>
-      <title><![CDATA[Terminologies related in computer]]></title>
-      <url>/2018/03/10/Terminologies-related-in-computer/</url>
-      <content type="html"><![CDATA[<table>
-<thead>
-<tr>
-<th style="text-align:center">English</th>
-<th style="text-align:center">Chinese</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">integrity(n.)</td>
-<td style="text-align:center">保存</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[JSON基础知识]]></title>
-      <url>/2018/03/08/JSON%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
-      <content type="html"></content>
-      
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[ubuntu重置密码出现的问题]]></title>
       <url>/2018/02/23/ubuntu%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-      <content type="html"><![CDATA[<p>忘记ubuntu的密码之后，按照网上的一般方式进入recovery mode，然后选择drop to root shell prompt，但是进去之后提示Give root password for maintenance<br>
-(要输入密码,可是自己就是要通过这种方式找回密码的)，网上找了许久，发现以下方法方法有效：</p><p><br>
-<img src="2.png" alt=""><br>
-<img src="3.png" alt=""><br>
-重启之后运行如下命令即可<br>
-<img src="1.png" alt=""><br>
-相关参考:</p><p><br>
-<a href="https://www.youtube.com/watch?v=ThPAWo7e8LI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=ThPAWo7e8LI</a></p><p><br>
+      <content type="html"><![CDATA[<p>忘记ubuntu的密码之后，按照网上的一般方式进入recovery mode，然后选择drop to root shell prompt，但是进去之后提示Give root password for maintenance
+(要输入密码,可是自己就是要通过这种方式找回密码的)，网上找了许久，发现以下方法方法有效：</p><p>
+<img src="2.png" alt="">
+<img src="3.png" alt="">
+重启之后运行如下命令即可
+<img src="1.png" alt="">
+相关参考:</p><p>
+<a href="https://www.youtube.com/watch?v=ThPAWo7e8LI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=ThPAWo7e8LI</a></p><p>
 <a href="https://help.ubuntu.com/community/LostPassword" target="_blank" rel="noopener">https://help.ubuntu.com/community/LostPassword</a></p>
 ]]></content>
       
@@ -52,23 +22,23 @@
     <entry>
       <title><![CDATA[利用vps搭建ss服务器]]></title>
       <url>/2018/02/22/%E5%88%A9%E7%94%A8vps%E6%90%AD%E5%BB%BAss%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-      <content type="html"><![CDATA[<p>参考别人的文件发现搭建一个ss（shadowsocks）服务器是很简单的，利用vps（virtual private server）就可以，此文以<br>
-<a href="https://vultr.com" target="_blank" rel="noopener"><font color="red">vultr</font></a>的vps为例:</p><p><br>
-注册账号，然后充值（支持支付宝）<img src="1.png" alt=""><br>
-然后点击Servers，再点击图片中的加号添加服务器<img src="2.png" alt=""><br>
-<img src="3.png" alt=""><br>
-<img src="4.png" alt=""><br>
-之后就是登录服务器部署，登录之前先从server details看一看登录服务器要用到的用户名、密码以及ip地址，可以从view console登录服务器，也可以使用<br>
-<a href="https://putty.org" target="_blank" rel="noopener"><font color="red">Putty</font></a>登录<br>
-<img src="5.png" alt=""><br>
-<img src="6.png" alt=""><br>
-登录服务器之后运行以下三条命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</div><div class="line">chmod +x shadowsocks.sh</div><div class="line">./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</div></pre></td></tr></table></figure>
-<p>三条命令运行成功之后，按照提示设置密码、端口和选择加密方式，成功安装之后会显示你的配置信息，之后下载客户端，输入配置信息就可以使用啦</p><p><br>
-相关链接：</p><p><br>
-<a href="https://shadowsocks.org/en/download/clients.html" target="_blank" rel="noopener">link for downloading shadowsocks</a></p><p><br>
-参考：</p><p><br>
-<a href="https://www.jianshu.com/p/1c82ee1293a4" target="_blank" rel="noopener">https://www.jianshu.com/p/1c82ee1293a4</a></p><p><br>
+      <content type="html"><![CDATA[<p>参考别人的文件发现搭建一个ss（shadowsocks）服务器是很简单的，利用vps（virtual private server）就可以，此文以
+<a href="https://vultr.com" target="_blank" rel="noopener"><font color="red">vultr</font></a>的vps为例:</p><p>
+注册账号，然后充值（支持支付宝）<img src="1.png" alt="">
+然后点击Servers，再点击图片中的加号添加服务器<img src="2.png" alt="">
+<img src="3.png" alt="">
+<img src="4.png" alt="">
+之后就是登录服务器部署，登录之前先从server details看一看登录服务器要用到的用户名、密码以及ip地址，可以从view console登录服务器，也可以使用
+<a href="https://putty.org" target="_blank" rel="noopener"><font color="red">Putty</font></a>登录
+<img src="5.png" alt="">
+<img src="6.png" alt="">
+登录服务器之后运行以下三条命令
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</div><div class="line">chmod +x shadowsocks.sh</div><div class="line">./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</div></pre></td></tr></table></figure></p>
+<p>三条命令运行成功之后，按照提示设置密码、端口和选择加密方式，成功安装之后会显示你的配置信息，之后下载客户端，输入配置信息就可以使用啦</p><p>
+相关链接：</p><p>
+<a href="https://shadowsocks.org/en/download/clients.html" target="_blank" rel="noopener">link for downloading shadowsocks</a></p><p>
+参考：</p><p>
+<a href="https://www.jianshu.com/p/1c82ee1293a4" target="_blank" rel="noopener">https://www.jianshu.com/p/1c82ee1293a4</a></p><p>
 <a href="https://teddysun.com/342.html" target="_blank" rel="noopener">https://teddysun.com/342.html</a></p>
 ]]></content>
       
@@ -78,11 +48,10 @@
     <entry>
       <title><![CDATA[hexo搭建博客中出现的问题以及解决方法]]></title>
       <url>/2017/12/20/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-      <content type="html"><![CDATA[<h1 id="hexo对html的table标签不兼容"><a class="markdownIt-Anchor" href="#hexo对html的table标签不兼容"></a> hexo对html的table标签不兼容</h1>
-<p>写文章时使用html的table做表格会发现文章被渲染出多个&lt;br&gt;,导致表格与其前面有很多空白的地方，十分不美观，<br>
-解决方法：<br><br>
-在hexo目录下_config.yml添加<br></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">marked:</span></div><div class="line"><span class="attr">    gfm:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    break:</span> <span class="literal">false</span></div></pre></td></tr></table></figure>
+      <content type="html"><![CDATA[<h1 id="hexo对html的table标签不兼容"><a href="#hexo对html的table标签不兼容" class="headerlink" title="hexo对html的table标签不兼容"></a>hexo对html的table标签不兼容</h1><p>写文章时使用html的table做表格会发现文章被渲染出多个&lt;br&gt;,导致表格与其前面有很多空白的地方，十分不美观，
+解决方法：<br>
+在hexo目录下_config.yml添加<br>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">marked:</span></div><div class="line"><span class="attr">    gfm:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    break:</span> <span class="literal">false</span></div></pre></td></tr></table></figure></p>
 <p><a href="https://github.com/hexojs/hexo/issues/1388" target="blank"><font color="red">参考</font></a></p>
 ]]></content>
       
@@ -92,8 +61,7 @@
     <entry>
       <title><![CDATA[爬虫学习]]></title>
       <url>/2017/12/19/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/</url>
-      <content type="html"><![CDATA[<h1 id="python2x和python3x调用urllib库常见的变化"><a class="markdownIt-Anchor" href="#python2x和python3x调用urllib库常见的变化"></a> Python2.X和Python3.X调用urllib库常见的变化</h1>
-<table>
+      <content type="html"><![CDATA[<h1 id="Python2-X和Python3-X调用urllib库常见的变化"><a href="#Python2-X和Python3-X调用urllib库常见的变化" class="headerlink" title="Python2.X和Python3.X调用urllib库常见的变化"></a>Python2.X和Python3.X调用urllib库常见的变化</h1><table>
 <thead>
 <tr>
 <th style="text-align:center">Python2.X</th>
@@ -135,27 +103,21 @@
 </tr>
 </tbody>
 </table>
-<h1 id="修改报头"><a class="markdownIt-Anchor" href="#修改报头"></a> 修改报头</h1>
-<p>当网站网页禁止（403 forbidden）使用Python urllib库中默认的报头(headers)，我们需要修改报头</p>
-<h2 id="使用build_opener修改报头"><a class="markdownIt-Anchor" href="#使用build_opener修改报头"></a> 使用build_opener()修改报头</h2>
-<p>以下是实现这种方法的一段代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib.request</div><div class="line">url = (<span class="string">"a url"</span>)</div><div class="line">headers = (<span class="string">"User-Agent"</span>,<span class="string">"the details of User-Agent"</span>)</div><div class="line">opener = urllib.request.build_opener()</div><div class="line">opener.addheaders = [headers]</div><div class="line">data = opener.open(url).read()</div></pre></td></tr></table></figure>
-<h2 id="使用add_header添加报头"><a class="markdownIt-Anchor" href="#使用add_header添加报头"></a> 使用add_header()添加报头</h2>
-<p>使用urllib.request.Request()下的add_header()修改UA。<br><br>
-实现浏览器的模拟，<br>
-以下是实现这种方法的一段代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib.request</div><div class="line">url = <span class="string">"a url"</span></div><div class="line">req = urllib.request.Request(url)</div><div class="line">req.add_header(<span class="string">"User-Agent"</span>,<span class="string">"the details of User-Agent"</span>)</div><div class="line">data = urllib.request.urlopen(req).read()</div></pre></td></tr></table></figure>
-<h1 id="使用代理"><a class="markdownIt-Anchor" href="#使用代理"></a> 使用代理</h1>
-<p>有时使用同一个IP爬取别人网页的东西，久了之后有可能会被该网站屏蔽这个IP，这是可以使用代理IP。<br>
-代理IP可以通过搜索引擎找到（国内高匿IP）。代码实现如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">use_proxy</span><span class="params">(proxy_addr,url)</span>:</span>         <span class="comment">#定义一个使用代理IP的函数</span></div><div class="line">	<span class="keyword">import</span> urllib.request</div><div class="line">	proxy = urllib.request.ProxyHandler(&#123;<span class="string">'http'</span>:proxy_addr&#125;)</div><div class="line">	opener = urllib.request.build_opener(proxy,urllib.request.ProxyHandler)</div><div class="line">	urllib.request.install_opener(opener)</div><div class="line">	data = urllib.request.urlopen(url).read().decode(<span class="string">'utf-8'</span>)</div><div class="line">	<span class="keyword">return</span> data</div><div class="line">proxy_addr = <span class="string">"xxx.xxx.xxx.xxx:xx"</span>  <span class="comment">#这里赋值给proxy_addr的是代理的IP以及它的端口号</span></div><div class="line">data = use_proxy(proxy_addr,<span class="string">'http://www.baidu.com'</span>)</div><div class="line">print(len(data))</div></pre></td></tr></table></figure>
+<h1 id="修改报头"><a href="#修改报头" class="headerlink" title="修改报头"></a>修改报头</h1><p>当网站网页禁止（403 forbidden）使用Python urllib库中默认的报头(headers)，我们需要修改报头</p>
+<h2 id="使用build-opener-修改报头"><a href="#使用build-opener-修改报头" class="headerlink" title="使用build_opener()修改报头"></a>使用build_opener()修改报头</h2><p>以下是实现这种方法的一段代码：
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib.request</div><div class="line">url = (<span class="string">"a url"</span>)</div><div class="line">headers = (<span class="string">"User-Agent"</span>,<span class="string">"the details of User-Agent"</span>)</div><div class="line">opener = urllib.request.build_opener()</div><div class="line">opener.addheaders = [headers]</div><div class="line">data = opener.open(url).read()</div></pre></td></tr></table></figure></p>
+<h2 id="使用add-header-添加报头"><a href="#使用add-header-添加报头" class="headerlink" title="使用add_header()添加报头"></a>使用add_header()添加报头</h2><p>使用urllib.request.Request()下的add_header()修改UA。<br>
+实现浏览器的模拟，
+以下是实现这种方法的一段代码：
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib.request</div><div class="line">url = <span class="string">"a url"</span></div><div class="line">req = urllib.request.Request(url)</div><div class="line">req.add_header(<span class="string">"User-Agent"</span>,<span class="string">"the details of User-Agent"</span>)</div><div class="line">data = urllib.request.urlopen(req).read()</div></pre></td></tr></table></figure></p>
+<h1 id="使用代理"><a href="#使用代理" class="headerlink" title="使用代理"></a>使用代理</h1><p>有时使用同一个IP爬取别人网页的东西，久了之后有可能会被该网站屏蔽这个IP，这是可以使用代理IP。
+代理IP可以通过搜索引擎找到（国内高匿IP）。代码实现如下：
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">use_proxy</span><span class="params">(proxy_addr,url)</span>:</span>         <span class="comment">#定义一个使用代理IP的函数</span></div><div class="line">	<span class="keyword">import</span> urllib.request</div><div class="line">	proxy = urllib.request.ProxyHandler(&#123;<span class="string">'http'</span>:proxy_addr&#125;)</div><div class="line">	opener = urllib.request.build_opener(proxy,urllib.request.ProxyHandler)</div><div class="line">	urllib.request.install_opener(opener)</div><div class="line">	data = urllib.request.urlopen(url).read().decode(<span class="string">'utf-8'</span>)</div><div class="line">	<span class="keyword">return</span> data</div><div class="line">proxy_addr = <span class="string">"xxx.xxx.xxx.xxx:xx"</span>  <span class="comment">#这里赋值给proxy_addr的是代理的IP以及它的端口号</span></div><div class="line">data = use_proxy(proxy_addr,<span class="string">'http://www.baidu.com'</span>)</div><div class="line">print(len(data))</div></pre></td></tr></table></figure></p>
 <p>这段代码运行成功会打印出百度首页的长度，失败的话会出现urllib.error.URLError的报错</p>
-<h1 id="正则表达式"><a class="markdownIt-Anchor" href="#正则表达式"></a> 正则表达式</h1>
-<p><a href="https://docs.python.org/3/library/re.html" target="_blank" rel="noopener"><font color="red">相关文档</font></a></p>
-<h2 id="research与rematch的qubie"><a class="markdownIt-Anchor" href="#research与rematch的qubie"></a> re.search()与re.match()的qubie</h2>
-<p>re.match()函数从源字符串的开头进行匹配，re.search()函数在全文进行检索并匹配</p><p><br>
-例子：</p><p></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line">string = <span class="string">"hellopythonmypythonhispythonourpythonPython"</span></div><div class="line">pattern = <span class="string">".python."</span></div><div class="line">result1 = re.match(pattern,string)</div><div class="line">result2 = re.search(pattern,string)</div><div class="line">print(result1)</div><div class="line">print(result2)</div><div class="line">----------------------------------------</div><div class="line"><span class="comment">#程序运行的结果为：</span></div><div class="line"><span class="keyword">None</span></div><div class="line">&lt;_sre.SRE_Match object; span(<span class="number">6</span>,<span class="number">14</span>),match=<span class="string">'ypythonh'</span>&gt;</div></pre></td></tr></table></figure>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p><a href="https://docs.python.org/3/library/re.html" target="_blank" rel="noopener"><font color="red">相关文档</font></a></p>
+<h2 id="re-search-与re-match-的qubie"><a href="#re-search-与re-match-的qubie" class="headerlink" title="re.search()与re.match()的qubie"></a>re.search()与re.match()的qubie</h2><p>re.match()函数从源字符串的开头进行匹配，re.search()函数在全文进行检索并匹配</p><p>
+例子：</p><p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line">string = <span class="string">"hellopythonmypythonhispythonourpythonPython"</span></div><div class="line">pattern = <span class="string">".python."</span></div><div class="line">result1 = re.match(pattern,string)</div><div class="line">result2 = re.search(pattern,string)</div><div class="line">print(result1)</div><div class="line">print(result2)</div><div class="line">----------------------------------------</div><div class="line"><span class="comment">#程序运行的结果为：</span></div><div class="line"><span class="keyword">None</span></div><div class="line">&lt;_sre.SRE_Match object; span(<span class="number">6</span>,<span class="number">14</span>),match=<span class="string">'ypythonh'</span>&gt;</div></pre></td></tr></table></figure></p>
 ]]></content>
       
         
@@ -165,121 +127,122 @@
       <title><![CDATA[函数与栈]]></title>
       <url>/2017/12/04/%E5%87%BD%E6%95%B0%E4%B8%8E%E6%A0%88/</url>
       <content type="html"><![CDATA[<p>程序使用栈内存来记住函数返回的位置，每一个c程序都由栈控制其函数执行的流程。几乎所有计算机编程语言都采用这个方案。</p>
-<h2 id="栈的调用规则"><a class="markdownIt-Anchor" href="#栈的调用规则"></a> 栈的调用规则</h2>
-<p>①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。<br>
-②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。<br>
-③当一个函数结束之后，程序将从储存在调用栈顶部的行编号处继续。调用栈顶部的内容就会被弹出。<br>
-④如果函数有实参，那么实参是储存在返回位置之上的。<br>
-⑤如果函数有局部变量，那么局部变量被储存在实参之上<br>
-⑥如果一个函数返回了一个值，这个值就回被写到调用函数栈帕的一个局部变量中，这个变量的地址（叫做值地址）储存在调用栈中。<br>
+<h2 id="栈的调用规则"><a href="#栈的调用规则" class="headerlink" title="栈的调用规则"></a>栈的调用规则</h2><p>①当一个函数被调用时，这条调用之后的行编号就被压入调用栈。这个行编号就是“返回位置”（RL），这是在调用函数结束后（即返回）之后程序继续执行的地方。
+②如果相同的函数在不同行被调用，那么这个调用都有一个相应的返回位置（每个函数调用之后的那行）。
+③当一个函数结束之后，程序将从储存在调用栈顶部的行编号处继续。调用栈顶部的内容就会被弹出。
+④如果函数有实参，那么实参是储存在返回位置之上的。
+⑤如果函数有局部变量，那么局部变量被储存在实参之上
+⑥如果一个函数返回了一个值，这个值就回被写到调用函数栈帕的一个局部变量中，这个变量的地址（叫做值地址）储存在调用栈中。
 ⑦实参和返回值共同构成了被调用函数的栈帕。</p>
-<h2 id="swap函数分析"><a class="markdownIt-Anchor" href="#swap函数分析"></a> swap()函数分析</h2>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> z;</div><div class="line">	z=x;</div><div class="line">	x=y;</div><div class="line">	y=z;</div><div class="line">&#125;</div><div class="line"></div><div class="line">main()</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a=<span class="number">1</span>;</div><div class="line">	<span class="keyword">int</span> b=<span class="number">2</span>;</div><div class="line">	swap(a,b);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,a,b);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="swap-函数分析"><a href="#swap-函数分析" class="headerlink" title="swap()函数分析"></a>swap()函数分析</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> z;</div><div class="line">	z=x;</div><div class="line">	x=y;</div><div class="line">	y=z;</div><div class="line">&#125;</div><div class="line"></div><div class="line">main()</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a=<span class="number">1</span>;</div><div class="line">	<span class="keyword">int</span> b=<span class="number">2</span>;</div><div class="line">	swap(a,b);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,a,b);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>我们知道，上面的那个swap()函数是不能实现将a,b交换的功能的，当swap()函数被调用的时候，a和b的值就被复制给了实参x和y，调用栈的情况如下：<br></p>
 <table>
-	<tr>
-		<td>栈帕(stack)
-		</td><td>标识符(identifier)
-		</td><td>地址(address)
-		</td><td>值(value)
-	</td></tr>
-	<tr>
-		<td rowspan="4">swap
-		</td><td>z
-		</td><td>106
-		</td><td>-(未知值)
-	</td></tr>
-	<tr>
-		<td>y
-		</td><td>105
-		</td><td>2
-	</td></tr>
-	<tr>
-		<td>x
-		</td><td>104
-		</td><td>1
-	</td></tr>
-		<td>返回位置
-		</td><td>103
-		</td><td>第15行
-	
-	</td><tr>
-		<td rowspan="2">main
-		</td><td>b
-		</td><td>102
-		</td><td>2
-	</td></tr>
-	<tr>
-		<td>a
-		</td><td>101
-		</td><td>1
-		</td></tr>
-	
+    <tr>
+        <td>栈帕(stack)
+        </td><td>标识符(identifier)
+        </td><td>地址(address)
+        </td><td>值(value)
+    </td></tr>
+    <tr>
+        <td rowspan="4">swap
+        </td><td>z
+        </td><td>106
+        </td><td>-(未知值)
+    </td></tr>
+    <tr>
+        <td>y
+        </td><td>105
+        </td><td>2
+    </td></tr>
+    <tr>
+        <td>x
+        </td><td>104
+        </td><td>1
+    </td></tr>
+        <td>返回位置
+        </td><td>103
+        </td><td>第15行
+    
+    </td><tr>
+        <td rowspan="2">main
+        </td><td>b
+        </td><td>102
+        </td><td>2
+    </td></tr>
+    <tr>
+        <td>a
+        </td><td>101
+        </td><td>1
+        </td></tr>
+    
 </table>
-<p>x的值被储存在临时变量z中，之后y的值被赋值给x，z的值赋给了y，这三步之后，在swap()函数内x和y的值确实交换了，但是在swap()中第7行代码结束之后，并在栈帕出<br>
+
+<p>x的值被储存在临时变量z中，之后y的值被赋值给x，z的值赋给了y，这三步之后，在swap()函数内x和y的值确实交换了，但是在swap()中第7行代码结束之后，并在栈帕出
 栈之前，栈内存是这样的：<br></p>
 <table>
-	<tr>
-		<td>栈帕(stack)
-		</td><td>标识符(identifier)
-		</td><td>地址(address)
-		</td><td>值(value)
-	</td></tr>
-	<tr>
-		<td rowspan="4">swap
-		</td><td>z
-		</td><td>106
-		</td><td>1
-	</td></tr>
-	<tr>
-		<td>y
-		</td><td>105
-		</td><td>2
-	</td></tr>
-	<tr>
-		<td>x
-		</td><td>104
-		</td><td>1
-	</td></tr>
-		<td>返回位置
-		</td><td>103
-		</td><td>第15行
-	
-	</td><tr>
-		<td rowspan="2">main
-		</td><td>b
-		</td><td>102
-		</td><td>2
-	</td></tr>
-	<tr>
-		<td>a
-		</td><td>101
-		</td><td>1
-		</td></tr>
-	
+    <tr>
+        <td>栈帕(stack)
+        </td><td>标识符(identifier)
+        </td><td>地址(address)
+        </td><td>值(value)
+    </td></tr>
+    <tr>
+        <td rowspan="4">swap
+        </td><td>z
+        </td><td>106
+        </td><td>1
+    </td></tr>
+    <tr>
+        <td>y
+        </td><td>105
+        </td><td>2
+    </td></tr>
+    <tr>
+        <td>x
+        </td><td>104
+        </td><td>1
+    </td></tr>
+        <td>返回位置
+        </td><td>103
+        </td><td>第15行
+    
+    </td><tr>
+        <td rowspan="2">main
+        </td><td>b
+        </td><td>102
+        </td><td>2
+    </td></tr>
+    <tr>
+        <td>a
+        </td><td>101
+        </td><td>1
+        </td></tr>
+    
 </table>
+
 <p>当swap()函数结束之后，顶帕出栈，栈内存就变成了：<br></p>
 <table>
-	<tr>
-		<td>栈帕(stack)
-		</td><td>标识符(identifier)
-		</td><td>地址(address)
-		</td><td>值(value)
-	</td></tr>
-	<tr>
-		<td rowspan="2">main
-		</td><td>b
-		</td><td>102
-		</td><td>2
-	</td></tr>
-	<tr>
-		<td>a
-		</td><td>101
-		</td><td>1
-		</td></tr>
-	
+    <tr>
+        <td>栈帕(stack)
+        </td><td>标识符(identifier)
+        </td><td>地址(address)
+        </td><td>值(value)
+    </td></tr>
+    <tr>
+        <td rowspan="2">main
+        </td><td>b
+        </td><td>102
+        </td><td>2
+    </td></tr>
+    <tr>
+        <td>a
+        </td><td>101
+        </td><td>1
+        </td></tr>
+    
 </table>
-<p>swap()函数被调用完成，由上面的栈内存可以看出，a和b的值并没有改变。swap()函数并没有在main()函数中起作用。C语言程序在<br>
+
+<p>swap()函数被调用完成，由上面的栈内存可以看出，a和b的值并没有改变。swap()函数并没有在main()函数中起作用。C语言程序在
 调用函数时使用“按值调用”的方式，这意味着值是从调用函数复制到被调用函数的实参中，这也是C语言函数调用的唯一方式。为此，C语言通过创建指针的概念来解决这个问题。</p>
 ]]></content>
       
@@ -290,211 +253,204 @@
       <title><![CDATA[寄存器与指令]]></title>
       <url>/2017/10/19/%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%8E%E6%8C%87%E4%BB%A4/</url>
       <content type="html"><![CDATA[<p>最近看汇编语言，顺便整理一下学了的指令以及寄存器，后面会逐步整理整理完善<br></p>
-<h1 id="寄存器register"><a class="markdownIt-Anchor" href="#寄存器register"></a> 寄存器(register)</h1>
-<h2 id="通用寄存器general-purpose-registers8个"><a class="markdownIt-Anchor" href="#通用寄存器general-purpose-registers8个"></a> 通用寄存器(General Purpose Registers,8个)</h2>
-<p>通用寄存器是一种通用型寄存器，用于传送和暂存数据，也可以参与算术逻辑运算，并保存运算结果。<br>
+<h1 id="寄存器-register"><a href="#寄存器-register" class="headerlink" title="寄存器(register)"></a>寄存器(register)</h1><h2 id="通用寄存器-General-Purpose-Registers-8个"><a href="#通用寄存器-General-Purpose-Registers-8个" class="headerlink" title="通用寄存器(General Purpose Registers,8个)"></a>通用寄存器(General Purpose Registers,8个)</h2><p>通用寄存器是一种通用型寄存器，用于传送和暂存数据，也可以参与算术逻辑运算，并保存运算结果。
 <br></p>
-<style>
-	table th:first-of-type{
-		width: 100px;
-		}
-</style>
-<table>
-	<thead>
-	<tr>
-		<th colspan="2">寄存器</th>
-		<th>功能</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td>16位
-		</td><td>32位
-	</td></tr>
-	<tr>
-		<td>AX
-		</td><td>EAX
-		<th>累加器</th>
-	</td></tr>
-	<tr>
-		<td>BX
-		</td><td>EBX
-		<th>sdfa</th>
-	</td></tr>
-	<tr>
-		<td>CX
-		<th>ECX</th>
-		</td><td>
-	</td></tr>
-	<tr>
-		<td>DX
-		<th>EDX</th>
-		</td><td>
-	</td></tr>
-	<tr>
-		<td>
-		<th>EBP</th>
-		</td><td>
-	</td></tr>
-	<tr>
-		<td></td>
-		<th>ESP</th>
-		<td>
-	</td></tr>
-	<tr>
-		<td></td>
-		<th>ESI</th>
-		<td>
-	</td></tr>
-	<tr>
-		<td></td>
-		<th>EDI</th>
-		<td>
-	</td></tr>
-	</tbody>
-</table><br>
-<h2 id="段寄存器segment-registers16位6个"><a class="markdownIt-Anchor" href="#段寄存器segment-registers16位6个"></a> 段寄存器(Segment Registers,16位，6个)</h2>
-<table>
-	<thead>
-	<tr>
-		<th>寄存器</th>
-		<th>功能</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<th>CS</th>
-		<th>代码段寄存器</th>
-	</tr>
-	<tr>
-		<td>DS
-		<th>数据段寄存器</th>
-	</td></tr>
-	<tr>
-		<th>SS</th>
-		<th>栈段寄存器</th>
-	</tr>
-	<tr>
-		<th>ES</th>
-		<td>附加（数据）段寄存器
-	</td></tr>
-	<tr>
-		<th>FS</th>
-		<td>数据段寄存器
-	</td></tr>
-	<tr>
-		<td>GS
-		</td><td>数据段寄存器
-	</td></tr>
-	</tbody>
-</table><br>
-<h2 id="程序状态与控制寄存器program-status-and-control-registers32位1个"><a class="markdownIt-Anchor" href="#程序状态与控制寄存器program-status-and-control-registers32位1个"></a> 程序状态与控制寄存器(Program Status and Control Registers,32位，1个)</h2>
-<h3 id="eflags标志位寄存器"><a class="markdownIt-Anchor" href="#eflags标志位寄存器"></a> EFLAGS:标志位寄存器</h3>
-<p>EFLAGS是32位的寄存器，该寄存器的每位都有意义，每位的值为0或1代表On/Off或True/False,其中有些位由系统直接设定，有些位则<br>
+<p><style>
+    table th:first-of-type{
+        width: 100px;
+        }
+</style></p>
+<p><table>
+    <thead>
+    <tr>
+        <th colspan="2">寄存器</th>
+        <th>功能</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>16位
+        </td><td>32位
+    </td></tr>
+    <tr>
+        <td>AX
+        </td><td>EAX
+        <th>累加器</th>
+    </td></tr>
+    <tr>
+        <td>BX
+        </td><td>EBX
+        <th>sdfa</th>
+    </td></tr>
+    <tr>
+        <td>CX
+        <th>ECX</th>
+        </td><td>
+    </td></tr>
+    <tr>
+        <td>DX
+        <th>EDX</th>
+        </td><td>
+    </td></tr>
+    <tr>
+        <td>
+        <th>EBP</th>
+        </td><td>
+    </td></tr>
+    <tr>
+        <td></td>
+        <th>ESP</th>
+        <td>
+    </td></tr>
+    <tr>
+        <td></td>
+        <th>ESI</th>
+        <td>
+    </td></tr>
+    <tr>
+        <td></td>
+        <th>EDI</th>
+        <td>
+    </td></tr>
+    </tbody>
+</table><br></p>
+<h2 id="段寄存器-Segment-Registers-16位，6个"><a href="#段寄存器-Segment-Registers-16位，6个" class="headerlink" title="段寄存器(Segment Registers,16位，6个)"></a>段寄存器(Segment Registers,16位，6个)</h2><p><table>
+    <thead>
+    <tr>
+        <th>寄存器</th>
+        <th>功能</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>CS</th>
+        <th>代码段寄存器</th>
+    </tr>
+    <tr>
+        <td>DS
+        <th>数据段寄存器</th>
+    </td></tr>
+    <tr>
+        <th>SS</th>
+        <th>栈段寄存器</th>
+    </tr>
+    <tr>
+        <th>ES</th>
+        <td>附加（数据）段寄存器
+    </td></tr>
+    <tr>
+        <th>FS</th>
+        <td>数据段寄存器
+    </td></tr>
+    <tr>
+        <td>GS
+        </td><td>数据段寄存器
+    </td></tr>
+    </tbody>
+</table><br></p>
+<h2 id="程序状态与控制寄存器-Program-Status-and-Control-Registers-32位，1个"><a href="#程序状态与控制寄存器-Program-Status-and-Control-Registers-32位，1个" class="headerlink" title="程序状态与控制寄存器(Program Status and Control Registers,32位，1个)"></a>程序状态与控制寄存器(Program Status and Control Registers,32位，1个)</h2><h3 id="EFLAGS-标志位寄存器"><a href="#EFLAGS-标志位寄存器" class="headerlink" title="EFLAGS:标志位寄存器"></a>EFLAGS:标志位寄存器</h3><p>EFLAGS是32位的寄存器，该寄存器的每位都有意义，每位的值为0或1代表On/Off或True/False,其中有些位由系统直接设定，有些位则
 根据程序指令的执行结果来设定</p>
-<h2 id="指令指针寄存器instruction-pointer32位1个"><a class="markdownIt-Anchor" href="#指令指针寄存器instruction-pointer32位1个"></a> 指令指针寄存器(Instruction Pointer,32位，1个)</h2>
-<h1 id="指令"><a class="markdownIt-Anchor" href="#指令"></a> 指令</h1>
-<table>
-	<thead>
-	<tr>
-		<th>指令(instruction)</th>
-		<th>功能</th>
-	</tr>
-	</thead>
-	
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-		<tr>
-			<th></th>
-			<th></th>
-		</tr>
-	
-
-<p>更多内容请参考Intel开发者手册：<br><br>
+<h2 id="指令指针寄存器-Instruction-Pointer-32位，1个"><a href="#指令指针寄存器-Instruction-Pointer-32位，1个" class="headerlink" title="指令指针寄存器(Instruction Pointer,32位，1个)"></a>指令指针寄存器(Instruction Pointer,32位，1个)</h2><h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><p><table>
+    <thead>
+    <tr>
+        <th>指令(instruction)</th>
+        <th>功能</th>
+    </tr>
+    </thead>
+    
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+    
+</table></p>
+<p>更多内容请参考Intel开发者手册：<br>
 <a href="https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-manual-325462.pdf" target="_blank" rel="noopener">https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-manual-325462.pdf</a></p>
-</table>]]></content>
+]]></content>
       
         
         <tags>
@@ -506,102 +462,10 @@
     </entry>
     
     <entry>
-      <title><![CDATA[数电中的等式证明]]></title>
-      <url>/2017/10/16/%E6%95%B0%E7%94%B5%E4%B8%AD%E7%9A%84%E7%AD%89%E5%BC%8F%E8%AF%81%E6%98%8E/</url>
-      <content type="html"><![CDATA[<p>在孙万蓉主编的《数字电路与系统设计》（高等教育出版社—ISBN-9787040426618）一书中43页有这样一个习题：用公式法证明<br>
-A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊕</span></span></span></span>B<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊕</span></span></span></span>C<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊕</span></span></span></span>D=(A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊕</span></span></span></span>B)<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊙</mo></mrow><annotation encoding="application/x-tex">\odot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊙</span></span></span></span>(A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊕</span></span></span></span>C)<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊙</mo></mrow><annotation encoding="application/x-tex">\odot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊙</span></span></span></span>(A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊕</span></span></span></span>D),下面我给出非完全公式法的证明，<br>
-用公式和结合真值表证明:</p>
-<table>
-<thead>
-<tr>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-<th>A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊙</mo></mrow><annotation encoding="application/x-tex">\odot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊙</span></span></span></span>B<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊙</mo></mrow><annotation encoding="application/x-tex">\odot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊙</span></span></span></span>C</th>
-<th>A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊕</span></span></span></span>B<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊕</span></span></span></span>C</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>先看真值表，由真值表得出三个数之间的异或等于三个数之间的同或，<br>
-即有结论：  A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊙</mo></mrow><annotation encoding="application/x-tex">\odot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊙</span></span></span></span>B<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊙</mo></mrow><annotation encoding="application/x-tex">\odot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊙</span></span></span></span>C = A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊕</span></span></span></span>B<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊕</span></span></span></span>C，<br><br>
-因为        A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">⊕</span></span></span></span>A = 0 , A$\oplus0 = A<br>
-所以        A\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">C</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi><mo>=</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">D = A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="mrel">=</span><span class="mord mathit">A</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">C</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">D</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo><mo>(</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">A = (A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mrel">=</span><span class="mopen">(</span><span class="mord mathit">A</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">B)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">(A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">A</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">C)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mclose">)</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">(A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">A</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi><mo>)</mo><mo>=</mo><mo>(</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">D) = (A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mrel">=</span><span class="mopen">(</span><span class="mord mathit">A</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">B)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span>\odot<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">(A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">A</span></span></span></span>\oplus<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">C)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mclose">)</span></span></span></span>\odot<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">(A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">A</span></span></span></span>\oplus$D)<br><br>
-证毕！</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> 数电 证明 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[linux]]></title>
       <url>/2017/10/14/linux/</url>
-      <content type="html"><![CDATA[<h2 id=""><a class="markdownIt-Anchor" href="#"></a> </h2>
-<h2 id="directories-found-on-linux-systems"><a class="markdownIt-Anchor" href="#directories-found-on-linux-systems"></a> Directories Found On Linux Systems</h2>
-<table>
+      <content type="html"><![CDATA[<p>##</p>
+<h2 id="Directories-Found-On-Linux-Systems"><a href="#Directories-Found-On-Linux-Systems" class="headerlink" title="Directories Found On Linux Systems"></a>Directories Found On Linux Systems</h2><table>
 <thead>
 <tr>
 <th>Directory</th>
@@ -711,7 +575,7 @@ A<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊕</
     <entry>
       <title><![CDATA[hello world]]></title>
       <url>/2017/08/05/hello-world/</url>
-      <content type="html"><![CDATA[<center><p>I'm new here.This is my first article.</p></center>]]></content>
+      <content type="html"><![CDATA[<center><p>I’m new here.This is my first article.</p></center>]]></content>
       
         
     </entry>
