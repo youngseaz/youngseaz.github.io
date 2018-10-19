@@ -3,6 +3,14 @@
   
     
     <entry>
+      <title><![CDATA[10年後の私へ]]></title>
+      <url>/2018/10/19/10%E5%B9%B4%E5%BE%8C%E3%81%AE%E7%A7%81%E3%81%B8/</url>
+      <content type="html"><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=161741&cid=270173&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="960" height="540"> </iframe>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[ubuntu重置密码出现的问题]]></title>
       <url>/2018/02/23/ubuntu%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
       <content type="html"><![CDATA[<p>忘记ubuntu的密码之后，按照网上的一般方式进入recovery mode，然后选择drop to root shell prompt，但是进去之后提示Give root password for maintenance
